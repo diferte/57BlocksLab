@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k6BuVi47PvfCzTjG4KSUCOZQ+9lDRbvYwnITfT565RMPgJaACtuCQur3d2YylMsxE1bfPyax75CCad31awj14g==",
+  "dgSpecHash": "xlI9ttcIgyhX9DPxHeRxuCgPjk7pYYcEUasd3VEhHRqG/u6YPPbYmOJ4/6TEmL4UWMWFYBHoBX9btqfKtSQ6sA==",
   "success": true,
-  "projectFilePath": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57Blocks.Api\\57Blocks.Api.csproj",
+  "projectFilePath": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57BlocksLab\\57Blocks.Api\\57Blocks.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\difer\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\difer\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

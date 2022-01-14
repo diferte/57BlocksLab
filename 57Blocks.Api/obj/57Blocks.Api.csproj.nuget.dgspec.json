@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Mis proyectos\\57Blocks\\57Blocks\\57Blocks.Api\\57Blocks.Api.csproj": {}
+    "E:\\Mis proyectos\\57Blocks\\57Blocks\\57BlocksLab\\57Blocks.Api\\57Blocks.Api.csproj": {}
   },
   "projects": {
-    "E:\\Mis proyectos\\57Blocks\\57Blocks\\57Blocks.Api\\57Blocks.Api.csproj": {
+    "E:\\Mis proyectos\\57Blocks\\57Blocks\\57BlocksLab\\57Blocks.Api\\57Blocks.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57Blocks.Api\\57Blocks.Api.csproj",
+        "projectUniqueName": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57BlocksLab\\57Blocks.Api\\57Blocks.Api.csproj",
         "projectName": "57Blocks.Api",
-        "projectPath": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57Blocks.Api\\57Blocks.Api.csproj",
+        "projectPath": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57BlocksLab\\57Blocks.Api\\57Blocks.Api.csproj",
         "packagesPath": "C:\\Users\\difer\\.nuget\\packages\\",
-        "outputPath": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57Blocks.Api\\obj\\",
+        "outputPath": "E:\\Mis proyectos\\57Blocks\\57Blocks\\57BlocksLab\\57Blocks.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

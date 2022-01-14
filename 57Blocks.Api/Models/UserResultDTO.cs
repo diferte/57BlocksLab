@@ -4,7 +4,7 @@ namespace _57Blocks.Api.Models
 {
     public class UserResultDTO
     {
-        public string Email { get; set; }
+        public Guid ID { get; set; }
 
         public string Token { get; set; }
     }

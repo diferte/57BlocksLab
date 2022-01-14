@@ -70,7 +70,7 @@ namespace _57Blocks.Api.Controllers
             }
         }
 
-        [HttpGet("validate")]
+        [HttpPost("validate")]
         public async Task<IActionResult> Validate(UserValidateDTO userModel)
         {
             //Validate email is a valid email address
@@ -109,7 +109,7 @@ namespace _57Blocks.Api.Controllers
 
             //Create object result
             UserResultDTO userResult = new UserResultDTO();
-            userResult.Email = userModel.Email;
+            userResult.ID = validate.ID;
             userResult.Token = token;
 
             return Ok(userResult);

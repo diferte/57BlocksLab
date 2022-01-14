@@ -27,17 +27,18 @@ namespace _57Blocks.Api.Controllers
             _configuration = configuration;
         }
 
-        [HttpGet("list")]
+        [HttpPost("list")]
         [Consumes("application/json")]
-        //[Authorize]
-        public async Task<IActionResult> GetPaged([FromQuery] PageParameters pageParameters)
+        public async Task<IActionResult> GetPaged(string ID,[FromQuery] PageParameters pageParameters)
         {
+
+            Guid requestID = Guid.Parse(ID);
+
             // Get total number of records
-            int total = _apiContext.Users.AsNoTracking().Count();
+            int total = _apiContext.Sales.AsNoTracking().Where(x => x.CreatorID == requestID).Count();
 
             // Select the customers based on paging parameters
-            var usuarios = await _apiContext.Users.AsNoTracking()
-                .OrderBy(c => c.Email)
+            var usuarios = await _apiContext.Sales.AsNoTracking().Where(x => x.CreatorID == requestID)
                 .Skip((pageParameters.PageNumber - 1) * pageParameters.PageSize)
                 .Take(pageParameters.PageSize)
                 .ToListAsync();
