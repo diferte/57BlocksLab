@@ -9,6 +9,7 @@ namespace _57Blocks.Api.Models
         public DateTime CreationDate { get; set; }
         public string Desciption { get; set; }
         public decimal Value { get; set; }
+        public bool IsPublic { get; set; }
 
     }
 }

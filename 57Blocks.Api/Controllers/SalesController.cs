@@ -27,18 +27,52 @@ namespace _57Blocks.Api.Controllers
             _configuration = configuration;
         }
 
+        [HttpPost("add")]
+        public async Task<IActionResult> Add(Sales saleModel)
+        {
+            try
+            {
+                await _apiContext.Sales.AddAsync(saleModel);
+                await _apiContext.SaveChangesAsync();
+
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("delete")]
+        public async Task<IActionResult> Delete(Sales saleModel)
+        {
+            try
+            {
+                _apiContext.Sales.Remove(saleModel);
+                await _apiContext.SaveChangesAsync();
+
+                return Ok();
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
         [HttpPost("list")]
         [Consumes("application/json")]
-        public async Task<IActionResult> GetPaged(string ID,[FromQuery] PageParameters pageParameters)
+        public async Task<IActionResult> GetPaged(string ID,bool isPublic,[FromQuery] PageParameters pageParameters)
         {
 
             Guid requestID = Guid.Parse(ID);
 
             // Get total number of records
-            int total = _apiContext.Sales.AsNoTracking().Where(x => x.CreatorID == requestID).Count();
+            int total = _apiContext.Sales.AsNoTracking().Where(x => x.CreatorID == requestID && x.IsPublic == isPublic).Count();
 
             // Select the customers based on paging parameters
-            var usuarios = await _apiContext.Sales.AsNoTracking().Where(x => x.CreatorID == requestID)
+            var usuarios = await _apiContext.Sales.AsNoTracking().Where(x => x.CreatorID == requestID && x.IsPublic == isPublic)
                 .Skip((pageParameters.PageNumber - 1) * pageParameters.PageSize)
                 .Take(pageParameters.PageSize)
                 .ToListAsync();
